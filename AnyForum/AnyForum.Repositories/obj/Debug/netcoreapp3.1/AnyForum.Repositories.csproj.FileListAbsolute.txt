@@ -1,0 +1,15 @@
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\bin\Debug\netcoreapp3.1\AnyForum.Repositories.deps.json
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\bin\Debug\netcoreapp3.1\AnyForum.Repositories.runtimeconfig.json
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\bin\Debug\netcoreapp3.1\AnyForum.Repositories.runtimeconfig.dev.json
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\bin\Debug\netcoreapp3.1\AnyForum.Repositories.dll
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\bin\Debug\netcoreapp3.1\AnyForum.Repositories.pdb
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\bin\Debug\netcoreapp3.1\AnyForum.Data.dll
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\bin\Debug\netcoreapp3.1\AnyForum.Data.pdb
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\obj\Debug\netcoreapp3.1\AnyForum.Repositories.csprojAssemblyReference.cache
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\obj\Debug\netcoreapp3.1\AnyForum.Repositories.AssemblyInfoInputs.cache
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\obj\Debug\netcoreapp3.1\AnyForum.Repositories.AssemblyInfo.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\obj\Debug\netcoreapp3.1\AnyForum.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\obj\Debug\netcoreapp3.1\AnyForum.Repositories.csproj.CopyComplete
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\obj\Debug\netcoreapp3.1\AnyForum.Repositories.dll
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\obj\Debug\netcoreapp3.1\AnyForum.Repositories.pdb
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum.Repositories\obj\Debug\netcoreapp3.1\AnyForum.Repositories.genruntimeconfig.cache

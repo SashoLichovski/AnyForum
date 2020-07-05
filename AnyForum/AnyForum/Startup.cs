@@ -1,16 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AnyForum.Data;
+using AnyForum.Repositories;
+using AnyForum.Repositories.Interfaces;
+using AnyForum.Services;
+using AnyForum.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
 
 namespace AnyForum
 {
@@ -33,6 +32,9 @@ namespace AnyForum
             services.AddDefaultIdentity<IdentityUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<AnyForumDbContext>();
+
+            services.AddTransient<IForumService, ForumService>();
+            services.AddTransient<IForumRepository, ForumRepository>();
 
             services.AddMvc();
             services.AddRazorPages();

@@ -1,0 +1,42 @@
+﻿@model List<AnyForum.ViewModels.HomeModels.ApproveForumViewModel>
+@section Styles{ 
+    <link rel="stylesheet" href="~/css/table.css" />
+}
+
+<h3>Approve new forums</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Forum name</th>
+            <th>Created by</th>
+            <th>Date created</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var forum in Model)
+	{
+        <tr>
+            <td>@forum.ForumName</td>
+            <td>@forum.CreatedBy</td>
+            <td>@forum.DateCreated.ToString("MMMM-dd")</td>
+            <td>
+                <a class="btn btn-success btn-sm">Approve</a> |
+                <a class="btn btn-danger btn-sm">Delete</a> |
+                <button class="btn btn-info btn-sm" onclick="ToggleDetails(event)" id="@forum.ForumName">Details</button>
+            </td>
+        </tr>
+        <tr class="hide" id="row-@forum.ForumName">
+            <td colspan="4">
+                <b><p>Description:</p></b>
+                @forum.Description
+            </td>
+        </tr>
+	}
+    </tbody>
+</table>
+
+@section Scripts{ 
+    <script src="~/js/table.js" ></script>
+}

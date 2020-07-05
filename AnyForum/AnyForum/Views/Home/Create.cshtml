@@ -1,0 +1,17 @@
+﻿@model AnyForum.ViewModels.HomeModels.CreateForumViewModel
+@section Styles{
+    <link rel="stylesheet" href="~/css/form.css" />
+}
+
+<h3>Create our new forum</h3>
+<br />
+<form asp-action="Create" method="post">
+    <span asp-validation-for="ForumName" class="text-danger"></span>
+    <input placeholder="Forum name ( Forum theme )" asp-for="ForumName" class="form-control" />
+    <br />
+    <span asp-validation-for="Description" class="text-danger"></span>
+    <textarea placeholder="Short description" asp-for="Description" class="form-control"></textarea>
+    <br />
+    <input type="submit" value="Create" class="btn btn-success" />
+</form>
+

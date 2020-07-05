@@ -144,11 +144,19 @@ C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\An
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\AnyForum.TagHelpers.output.cache
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\AnyForum.RazorCoreGenerate.cache
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\PersonalData.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Approve.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\HomePage.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Success.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -163,5 +171,3 @@ C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\st
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\AnyForum.dll
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\AnyForum.pdb
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\AnyForum.genruntimeconfig.cache
-C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\HomePage.cshtml.g.cs
-C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs

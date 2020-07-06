@@ -1,1 +1,37 @@
-﻿
+﻿.forumContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.forumBody{
+    width: 250px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 1px solid whitesmoke;
+    border-radius: 7px;
+    color: whitesmoke;
+}
+
+.forumBody a{
+    color: whitesmoke !important;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.container h3{
+    margin-bottom: 7px;
+}
+
+.flexContainer form{
+    display: flex;
+}
+
+input{
+    margin-left: 10px;
+}
+

@@ -4,6 +4,7 @@ using AnyForum.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AnyForum.Services
@@ -15,6 +16,13 @@ namespace AnyForum.Services
         public ForumService(IForumRepository forumRepo)
         {
             this.forumRepo = forumRepo;
+        }
+
+        public void Approve(int id)
+        {
+            var forum = forumRepo.GetById(id);
+            forum.IsApproved = true;
+            forumRepo.Update(forum);
         }
 
         public void Create(string forumName, string forumDescription ,string userId, string userName, bool isAdmin)
@@ -34,9 +42,31 @@ namespace AnyForum.Services
             forumRepo.Add(newForum);
         }
 
-        public List<Forum> GetForApproval()
+        public List<Forum> GetByStatus(bool isApproved)
         {
-            return forumRepo.GetForApproval();
+            return forumRepo.GetByStatus(isApproved);
+        }
+
+        public List<Forum> GetSearch(string searchInput)
+        {
+            var dbForums = forumRepo.GetAll();
+            return dbForums.Where(x => x.ForumName.ToLower().Contains(searchInput.ToLower())).ToList();
+        }
+
+        public void Remove(int id)
+        {
+            forumRepo.Remove(id);
+        }
+
+        public bool Validate(string forumName)
+        {
+            var forums = forumRepo.GetAll();
+            var forum = forums.FirstOrDefault(x => x.ForumName.Contains(forumName));
+            if (forum == null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

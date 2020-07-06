@@ -20,9 +20,31 @@ namespace AnyForum.Repositories
             context.SaveChanges();
         }
 
-        public List<Forum> GetForApproval()
+        public List<Forum> GetAll()
         {
-            return context.Forums.Where(x => x.IsApproved == false).ToList();
+            return context.Forums.ToList();
+        }
+
+        public Forum GetById(int id)
+        {
+            return context.Forums.FirstOrDefault(x => x.Id == id);
+        }
+
+        public List<Forum> GetByStatus(bool IsApproved)
+        {
+            return context.Forums.Where(x => x.IsApproved == IsApproved).ToList();
+        }
+
+        public void Remove(int id)
+        {
+            context.Forums.Remove(GetById(id));
+            context.SaveChanges();
+        }
+
+        public void Update(Forum forum)
+        {
+            context.Forums.Update(forum);
+            context.SaveChanges();
         }
     }
 }

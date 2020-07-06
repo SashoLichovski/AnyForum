@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AnyForum.ViewModels.HomeModels
 {
-    public class SuccessViewModel
+    public class ActionMessageViewModel
     {
         public string Message { get; set; }
     }

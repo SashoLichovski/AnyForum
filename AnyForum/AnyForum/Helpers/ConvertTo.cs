@@ -7,16 +7,26 @@ using System.Threading.Tasks;
 
 namespace AnyForum.Helpers
 {
-    public static class Convert
+    public static class ConvertTo
     {
-        internal static ApproveForumViewModel ToViewModel(this Forum forum)
+        internal static ApproveForumViewModel ApproveForumViewModel(Forum forum)
         {
             return new ApproveForumViewModel
             {
+                Id = forum.Id,
                 ForumName = forum.ForumName,
                 CreatedBy = forum.CreatedBy,
                 Description = forum.Description,
                 DateCreated = forum.DateCreated
+            };
+        }
+
+        internal static HomePageViewModel HomePageViewModel(Forum forum)
+        {
+            return new HomePageViewModel
+            {
+                Id = forum.Id,
+                ForumTitle = forum.ForumName
             };
         }
     }

@@ -1,5 +1,4 @@
-﻿
-function ToggleDetails(event) {
+﻿function ToggleDetails(event) {
     var tag = document.getElementById(`row-${event.target.id}`);
     var btn = document.getElementById(`${event.target.id}`);
     if (tag.classList.contains("hide")) {

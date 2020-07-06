@@ -8,6 +8,10 @@ namespace AnyForum.Repositories.Interfaces
     public interface IForumRepository
     {
         void Add(Forum forum);
-        List<Forum> GetForApproval();
+        List<Forum> GetByStatus(bool isApproved);
+        Forum GetById(int id);
+        void Update(Forum forum);
+        void Remove(int id);
+        List<Forum> GetAll();
     }
 }

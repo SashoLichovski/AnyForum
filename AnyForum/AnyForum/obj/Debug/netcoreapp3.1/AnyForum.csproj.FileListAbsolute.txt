@@ -153,10 +153,10 @@ C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Ra
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Approve.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\ActionMessage.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\ForumsForApprove.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\HomePage.cshtml.g.cs
-C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Success.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs

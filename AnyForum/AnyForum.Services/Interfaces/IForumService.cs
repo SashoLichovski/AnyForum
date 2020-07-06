@@ -9,6 +9,10 @@ namespace AnyForum.Services.Interfaces
     public interface IForumService
     {
         void Create(string forumName, string forumDescription ,string userId, string userName, bool isAdmin);
-        List<Forum> GetForApproval();
+        List<Forum> GetByStatus(bool isApproved);
+        void Approve(int id);
+        void Remove(int id);
+        bool Validate(string forumName);
+        List<Forum> GetSearch(string searchInput);
     }
 }

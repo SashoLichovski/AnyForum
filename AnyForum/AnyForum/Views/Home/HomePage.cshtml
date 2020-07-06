@@ -1,13 +1,40 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model List<AnyForum.ViewModels.HomeModels.HomePageViewModel>
 @section Styles{ 
     <link rel="stylesheet" href="~/css/homePage.css" />
 }
 
 <div class="container">
+    @if (Model.Count == 0)
+    {
+        <h3>@ViewData["header"]</h3>
+        <h5>No forums found</h5>
+        <br />
+        <span>Back to <a asp-controller="Home" asp-action="HomePage">Home page</a></span>
+    }
+    else
+    {
+        <div class="flexContainer">
+            <a class="btn btn-outline-success" asp-action="Create">Create forum</a>
+            <form asp-action="HomePage">
+                <input placeholder="Search forum" name="searchInput" class="form-control" />
+                <input type="submit" value="Search" class="btn btn-outline-info" />
+            </form>
+        </div>
+        
+        <h3>@ViewData["header"]</h3>
+        <div class="forumContainer">
 
-    <a class="btn btn-outline-success btn-lg" asp-action="Create">Create forum</a>
-
-
+            @foreach (var forum in Model)
+            {
+                <a class="forumBody" asp-action="Forum" asp-route-id="@forum.Id">
+                    <h4>@forum.ForumTitle</h4>
+                    <span>Views: 12</span>
+                    <br />
+                    <span>Posts: 123</span>
+                    <br />
+                    <span>Replyes: 764</span>
+                </a>
+            }
+        </div>
+    }
 </div>

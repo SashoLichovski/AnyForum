@@ -22,8 +22,8 @@
             <td>@forum.CreatedBy</td>
             <td>@forum.DateCreated.ToString("MMMM-dd")</td>
             <td>
-                <a class="btn btn-success btn-sm">Approve</a> |
-                <a class="btn btn-danger btn-sm">Delete</a> |
+                <a class="btn btn-success btn-sm" asp-action="Approve" asp-route-id="@forum.Id">Approve</a> |
+                <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@forum.Id">Delete</a> |
                 <button class="btn btn-info btn-sm" onclick="ToggleDetails(event)" id="@forum.ForumName">Details</button>
             </td>
         </tr>

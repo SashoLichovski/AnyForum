@@ -7,6 +7,7 @@ namespace AnyForum.ViewModels.HomeModels
 {
     public class ApproveForumViewModel
     {
+        public int Id { get; set; }
         public string ForumName { get; set; }
         public string CreatedBy { get; set; }
         public string Description { get; set; }

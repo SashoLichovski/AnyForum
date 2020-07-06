@@ -9,5 +9,6 @@ namespace AnyForum.ViewModels.HomeModels
     {
         public int Id { get; set; }
         public string ForumTitle { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 }

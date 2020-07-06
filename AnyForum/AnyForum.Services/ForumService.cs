@@ -42,6 +42,11 @@ namespace AnyForum.Services
             forumRepo.Add(newForum);
         }
 
+        public Forum GetById(int id)
+        {
+            return forumRepo.GetById(id);
+        }
+
         public List<Forum> GetByStatus(bool isApproved)
         {
             return forumRepo.GetByStatus(isApproved);
@@ -50,7 +55,7 @@ namespace AnyForum.Services
         public List<Forum> GetSearch(string searchInput)
         {
             var dbForums = forumRepo.GetAll();
-            return dbForums.Where(x => x.ForumName.ToLower().Contains(searchInput.ToLower())).ToList();
+            return dbForums.Where(x => x.IsApproved == true && x.ForumName.ToLower().Contains(searchInput.ToLower())).ToList();
         }
 
         public void Remove(int id)

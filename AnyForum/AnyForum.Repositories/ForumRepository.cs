@@ -1,5 +1,6 @@
 ﻿using AnyForum.Data;
 using AnyForum.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -27,7 +28,10 @@ namespace AnyForum.Repositories
 
         public Forum GetById(int id)
         {
-            return context.Forums.FirstOrDefault(x => x.Id == id);
+            return context.Forums
+                .Include(x => x.Comments)
+                .ThenInclude(x => x.Replies)
+                .FirstOrDefault(x => x.Id == id);
         }
 
         public List<Forum> GetByStatus(bool IsApproved)

@@ -36,6 +36,13 @@ namespace AnyForum
             services.AddTransient<IForumService, ForumService>();
             services.AddTransient<IForumRepository, ForumRepository>();
 
+            services.AddTransient<ICommentService, CommentService>();
+            services.AddTransient<ICommentRepository, CommentRepository>();
+
+            services.AddTransient<IReplyService, ReplyService>();
+            services.AddTransient<IReplyRepository, ReplyRepository>();
+
+
             services.AddMvc();
             services.AddRazorPages();
         }

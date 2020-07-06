@@ -14,5 +14,6 @@ namespace AnyForum.Services.Interfaces
         void Remove(int id);
         bool Validate(string forumName);
         List<Forum> GetSearch(string searchInput);
+        Forum GetById(int id);
     }
 }

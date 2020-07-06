@@ -1,0 +1,38 @@
+﻿.commentBody {
+    padding: 15px 10px;
+    border-bottom: 1px solid rgb(34, 114, 0);
+    border-top: 1px solid rgb(34, 114, 0);
+    margin-bottom: 5px;
+}
+
+.message {
+    padding: 5px 15px;
+}
+
+.replySectionContainer {
+    padding: 10px;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    border-top: 1px solid rgb(128, 128, 128);
+}
+
+.replyFormCotnainer {
+    padding: 10px 20px;
+}
+
+.seeReplyBtn {
+    margin: 10px 20px;
+}
+
+.replyFormCotnainer input, textarea{
+    margin-top: 15px;
+}
+
+.replyBody {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(7, 0, 160);
+    border-top: 1px solid rgb(7, 0, 160);
+}
+
+.hide{
+    display: none;
+}

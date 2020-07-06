@@ -1,0 +1,81 @@
+﻿@model AnyForum.ViewModels.SingleForumModels.ForumDetailsViewModel
+@section Styles{ 
+    <link rel="stylesheet" href="~/css/forumDetails.css" />
+}
+
+<div class="container">
+
+    <h3>Welcome to @Model.ForumName</h3>
+    <br />
+
+    <form asp-action="Comment" method="post">
+        <input type="hidden" name="forumId" value="@Model.Id" />
+        <textarea placeholder="Enter your comment / question" name="message" class="form-control"></textarea>
+        <br />
+        <input type="submit" value="Comment" class="btn btn-outline-success" />
+    </form>
+    <br />
+
+    <h5>Comments:</h5>
+    @if (Model.Comments == null)
+    {
+        <h5>No posts yet. Be the first one to ask or share experience !</h5>
+    }
+    else
+    {
+        @foreach (var comment in Model.Comments)
+        {
+            <div class="commentBody"> 
+                <span>Posted by: <b>@comment.CreatedBy</b></span>
+                <br />
+                <span>Comment:</span>
+                <br />
+                <p class="message">@comment.Message</p>
+                <span>Posted on: @comment.DateCreated.ToString("dd, MMMM, yyyy")</span>
+                <br />
+                <br />
+
+                <button class="btn btn-info btn-sm seeReplyBtn" id="@comment.Id" onclick="ToggleSection(event)">See reply section</button>
+                <span>Replies: <b>@comment.Replies.Count</b></span>
+                <div class="replySectionContainer hide" id="replySection-@comment.Id">
+
+                    <div class="replyFormCotnainer">
+                        <form asp-action="Reply" method="post">
+                            <input type="hidden" name="commentId" value="@comment.Id" />
+                            <input type="hidden" name="forumId" value="@Model.Id" />
+                            <textarea placeholder="Enter your reply / answer" name="message" class="form-control"></textarea>
+                            <input type="submit" value="Submit reply" class="btn btn-outline-success btn-sm" />
+                        </form>
+                    </div>
+
+                    @if (comment.Replies.Count == 0)
+                    {
+                        <p>No replies yet. Be the first one to answer or share experience</p>
+                    }
+                    else
+                    {
+                        @foreach (var reply in comment.Replies)
+                        {
+                            <div class="replyBody" >
+                                <span>Posted by: <b>@reply.CreatedBy</b></span>
+                                <br />
+                                <span>Reply:</span>
+                                <br />
+                                <p class="message">@reply.Message</p>
+                                <span>Posted on: @reply.DateCreated.ToString("dd, MMMM, yyyy")</span>
+                            </div>
+                        }
+                    }
+                </div>
+                
+                    
+            </div>
+            
+        }
+    }
+</div>
+
+
+@section Scripts{ 
+    <script src="~/js/forumDetails.js"></script>
+}

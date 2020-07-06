@@ -26,13 +26,15 @@
 
             @foreach (var forum in Model)
             {
-                <a class="forumBody" asp-action="Forum" asp-route-id="@forum.Id">
+                <a class="forumBody" asp-controller="SingleForum" asp-action="Details" asp-route-id="@forum.Id">
                     <h4>@forum.ForumTitle</h4>
                     <span>Views: 12</span>
                     <br />
                     <span>Posts: 123</span>
                     <br />
                     <span>Replyes: 764</span>
+                    <br />
+                    <span>Created on: @forum.DateCreated.ToString("dd, MMMM, yyyy")</span>
                 </a>
             }
         </div>

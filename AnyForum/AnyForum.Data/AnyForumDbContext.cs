@@ -13,5 +13,7 @@ namespace AnyForum.Data
         }
 
         public DbSet<Forum> Forums { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Reply> Replies { get; set; }
     }
 }

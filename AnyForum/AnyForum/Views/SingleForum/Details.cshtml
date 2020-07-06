@@ -5,6 +5,11 @@
 
 <div class="container">
 
+    @if (!string.IsNullOrEmpty(Model.ErrorMsg))
+    {
+        <h1 class="text-danger">@Model.ErrorMsg</h1>
+    }
+
     <h3>Welcome to @Model.ForumName</h3>
     <br />
 
@@ -44,7 +49,7 @@
                             <input type="hidden" name="commentId" value="@comment.Id" />
                             <input type="hidden" name="forumId" value="@Model.Id" />
                             <textarea placeholder="Enter your reply / answer" name="message" class="form-control"></textarea>
-                            <input type="submit" value="Submit reply" class="btn btn-outline-success btn-sm" />
+                            <input type="submit" value="Submit reply" class="btn btn-outline-success btn-sm" onchange="CheckInput(event)"/>
                         </form>
                     </div>
 

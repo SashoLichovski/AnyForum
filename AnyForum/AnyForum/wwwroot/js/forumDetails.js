@@ -10,3 +10,9 @@
     }
     console.log(event.target.id);
 }
+
+function CheckInput(event) {
+    //var tag = document.getElementById("commentInput");
+    //var btn = document.getElementById()
+    console.log(event.target.id)
+}

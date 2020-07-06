@@ -26,16 +26,24 @@ namespace AnyForum.Controllers
             this.replyService = replyService;
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int id, string errorMsg)
         {
             var dbForum = forumService.GetById(id);
             var model = ConvertTo.ForumDetailsViewModel(dbForum);
+            if (!string.IsNullOrEmpty(errorMsg))
+            {
+                model.ErrorMsg = errorMsg;
+            }
             return View(model);
         }
 
         [HttpPost]
         public IActionResult Comment(int forumId, string message)
         {
+            if (string.IsNullOrEmpty(message))
+            {
+                return RedirectToAction("Details", new { Id = forumId, ErrorMsg = "You cant submit empty comment. Please try again" });
+            }
             var userId = userManager.GetUserId(User);
             var userName = User.Identity.Name;
             commentService.Create(message, forumId, userId, userName);
@@ -45,6 +53,10 @@ namespace AnyForum.Controllers
         [HttpPost]
         public IActionResult Reply(int forumId, int commentId, string message)
         {
+            if (string.IsNullOrEmpty(message))
+            {
+                return RedirectToAction("Details", new { Id = forumId, ErrorMsg = "You cant submit empty reply. Please try again" });
+            }
             var userName = User.Identity.Name;
             replyService.Create(message, commentId, userName);
             return RedirectToAction("Details", new { Id = forumId });

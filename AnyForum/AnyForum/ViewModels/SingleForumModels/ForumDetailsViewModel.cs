@@ -12,5 +12,6 @@ namespace AnyForum.ViewModels.SingleForumModels
         public string ForumName { get; set; }
         public string CreatedBy { get; set; }
         public List<CommentViewModel> Comments { get; set; }
+        public string ErrorMsg { get; set; }
     }
 }

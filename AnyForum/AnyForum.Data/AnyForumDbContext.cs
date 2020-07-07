@@ -15,5 +15,8 @@ namespace AnyForum.Data
         public DbSet<Forum> Forums { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Reply> Replies { get; set; }
+        public DbSet<Friend> Friends { get; set; }
+        public DbSet<Chat> Chats { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
     }
 }

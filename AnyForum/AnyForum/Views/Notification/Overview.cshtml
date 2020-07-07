@@ -1,0 +1,15 @@
+﻿@model List<AnyForum.ViewModels.NotificationModels.NotificationViewModel>
+
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div>
+            <h5>@item.Message</h5>
+            <a class="btn btn-outline-success" asp-controller="Friend" asp-action="Accept" asp-route-byUserId="@item.ByUserId">Accept</a>
+            <a>Decline</a>
+        </div>
+        <hr />
+    }
+</div>
+

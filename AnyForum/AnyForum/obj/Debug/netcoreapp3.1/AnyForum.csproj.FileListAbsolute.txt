@@ -172,3 +172,5 @@ C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\st
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\AnyForum.dll
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\AnyForum.pdb
 C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\AnyForum.genruntimeconfig.cache
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Friend\AddFriend.cshtml.g.cs
+C:\Users\Sasho\Desktop\MVC\AnyForum\AnyForum\AnyForum\obj\Debug\netcoreapp3.1\Razor\Views\Notification\Overview.cshtml.g.cs

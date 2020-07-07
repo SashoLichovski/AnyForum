@@ -8,7 +8,7 @@ namespace AnyForum.Services.Interfaces
 {
     public interface IForumService
     {
-        void Create(string forumName, string forumDescription ,string userId, string userName, bool isAdmin);
+        void Create(string forumName, string forumDescription , string userName, bool isAdmin);
         List<Forum> GetByStatus(bool isApproved);
         void Approve(int id);
         void Remove(int id);

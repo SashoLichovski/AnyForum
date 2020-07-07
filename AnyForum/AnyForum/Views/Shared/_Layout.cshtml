@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AnyForum</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -23,6 +23,12 @@
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-light" asp-controller="Home" asp-action="HomePage">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" id="friendBtn" onclick="Toggle()">Friends</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-controller="Notification" asp-action="Overview" asp-route-email="@User.Identity.Name">Notifications</a>
                             </li>
                         }
                         @if (User.IsInRole("admin"))
@@ -37,6 +43,18 @@
             </div>
         </nav>
     </header>
+    <div class="friendSidebard" id="sidebar">
+        <h3 class="sidebarHeader">Friends</h3>
+
+        <div class="sidebardBody">
+            <div class="friend">
+                <a asp-controller="Friend" asp-action="AddFriend">Add friend</a>
+            </div>
+            <div class="friend">Friend 1</div>
+            <div class="friend">Friend 1</div>
+            <div class="friend">Friend 1</div>
+        </div>
+    </div>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -45,6 +63,7 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

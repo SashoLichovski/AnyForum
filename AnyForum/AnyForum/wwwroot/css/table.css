@@ -1,4 +1,8 @@
-﻿table{
+﻿.container h3{
+    margin-top: 20px;
+}
+
+table{
     color: whitesmoke !important;
 }
 

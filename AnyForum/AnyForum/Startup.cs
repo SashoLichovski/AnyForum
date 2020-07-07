@@ -42,6 +42,8 @@ namespace AnyForum
             services.AddTransient<IReplyService, ReplyService>();
             services.AddTransient<IReplyRepository, ReplyRepository>();
 
+            services.AddTransient<INotificationService, NotificationService>();
+            services.AddTransient<INotificationRepository, NotificationRepository>();
 
             services.AddMvc();
             services.AddRazorPages();

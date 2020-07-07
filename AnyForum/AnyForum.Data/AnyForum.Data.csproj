@@ -17,6 +17,12 @@
     <Compile Remove="Migrations\20200705182654_PropChange.Designer.cs" />
     <Compile Remove="Migrations\20200706114402_CommentReply.cs" />
     <Compile Remove="Migrations\20200706114402_CommentReply.Designer.cs" />
+    <Compile Remove="Migrations\20200707161347_Friends.cs" />
+    <Compile Remove="Migrations\20200707161347_Friends.Designer.cs" />
+    <Compile Remove="Migrations\20200707204116_NotificationSendTo.cs" />
+    <Compile Remove="Migrations\20200707204116_NotificationSendTo.Designer.cs" />
+    <Compile Remove="Migrations\20200707204216_NotificationSendTo.cs" />
+    <Compile Remove="Migrations\20200707204216_NotificationSendTo.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

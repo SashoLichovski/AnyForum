@@ -79,9 +79,8 @@ namespace AnyForum.Controllers
                 if (isValid)
                 {
                     var isAdmin = User.IsInRole("admin");
-                    var userId = userManager.GetUserId(User);
                     var userName = User.Identity.Name;
-                    forumService.Create(model.ForumName, model.Description ,userId, userName, isAdmin);
+                    forumService.Create(model.ForumName, model.Description , userName, isAdmin);
                     if (isAdmin)
                     {
                         return RedirectToAction("HomePage");

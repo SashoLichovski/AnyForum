@@ -13,7 +13,7 @@ namespace AnyForum.Controllers
         private readonly ICommentService commentService;
         private readonly IReplyService replyService;
         private readonly UserManager<IdentityUser> userManager;
-
+        
 
         public SingleForumController(IForumService forumService,
             ICommentService commentService,

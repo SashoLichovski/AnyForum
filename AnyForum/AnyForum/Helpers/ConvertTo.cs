@@ -1,6 +1,7 @@
 ﻿using AnyForum.Data;
 using AnyForum.Data.Migrations;
 using AnyForum.ViewModels.HomeModels;
+using AnyForum.ViewModels.NotificationModels;
 using AnyForum.ViewModels.SingleForumModels;
 using System;
 using System.Collections.Generic;
@@ -73,6 +74,19 @@ namespace AnyForum.Helpers
                 CreatedBy = reply.CreatedBy,
                 Message = reply.Message,
                 DateCreated = reply.DateCreated
+            };
+        }
+
+
+        // FOR NOTIFICATION CONTROLLER 
+        internal static NotificationViewModel NotificationViewModel(Notification notification)
+        {
+            return new NotificationViewModel
+            {
+                Id = notification.Id,
+                Message = notification.Message,
+                SentTo = notification.SendTo,
+                ByUserId = notification.UserId
             };
         }
     }

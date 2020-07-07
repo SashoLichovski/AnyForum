@@ -16,11 +16,7 @@ namespace AnyForum.Data
         [Required]
         public DateTime DateCreated { get; set; }
         public bool IsApproved { get; set; }
-
-        public IdentityUser User { get; set; }
-        public string UserId { get; set; }
         public string CreatedBy { get; set; }
-
         public List<Comment> Comments { get; set; }
 
     }

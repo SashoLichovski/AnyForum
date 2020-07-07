@@ -25,7 +25,7 @@ namespace AnyForum.Services
             forumRepo.Update(forum);
         }
 
-        public void Create(string forumName, string forumDescription ,string userId, string userName, bool isAdmin)
+        public void Create(string forumName, string forumDescription , string userName, bool isAdmin)
         {
             var newForum = new Forum()
             {
@@ -33,7 +33,6 @@ namespace AnyForum.Services
                 Description = forumDescription,
                 DateCreated = DateTime.Now,
                 CreatedBy = userName,
-                UserId = userId,
             };
             if (isAdmin)
             {

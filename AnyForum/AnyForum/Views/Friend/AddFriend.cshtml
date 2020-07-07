@@ -1,0 +1,13 @@
+﻿
+@section Styles{ 
+    <link rel="stylesheet" href="~/css/form.css" />
+}
+
+<br />
+<h3>Enter user's email adress</h3>
+<br />
+<form asp-action="AddFriend" method="post">
+    <input placeholder="Email adress" name="email" class="form-control"/>
+    <br />
+    <input type="submit" class="btn btn-success" value="Add" />
+</form>

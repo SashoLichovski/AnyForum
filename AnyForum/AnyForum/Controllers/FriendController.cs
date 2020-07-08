@@ -12,11 +12,13 @@ namespace AnyForum.Controllers
     {
         private readonly INotificationService notificationService;
         private readonly UserManager<IdentityUser> userManager;
+        private readonly IFriendService friendService;
 
-        public FriendController(INotificationService notificationService, UserManager<IdentityUser> userManager)
+        public FriendController(INotificationService notificationService, UserManager<IdentityUser> userManager, IFriendService friendService)
         {
             this.notificationService = notificationService;
             this.userManager = userManager;
+            this.friendService = friendService;
         }
 
         public IActionResult AddFriend()
@@ -32,14 +34,30 @@ namespace AnyForum.Controllers
             {
                 return RedirectToAction("ActionMessage", "Home", new { Message = $"User with email {email} does not exist. Please check your spelling" });
             }
+            if (notificationService.CheckNotification(dbUser.Result.Id, email))
+            {
+                return RedirectToAction("ActionMessage", "Home", new { Message = $"You have already sent notification to this user - {email}" });
+            }
+            if (friendService.IsFriendAlready(dbUser.Result.Id, userManager.FindByEmailAsync(email).Result.Id))
+            {
+                return RedirectToAction("ActionMessage", "Home", new { Message = $"You are already friend with {email}" });
+            }
             notificationService.Create(email, dbUser.Result.Id, userRequest);
-            return RedirectToAction("ActionMessage", "Home", new { Message = $"Friend request successfuly sent" });
+            return RedirectToAction("ActionMessage", "Home", new { Message = $"Friend request successfuly sent to {email}" });
         }
 
         public IActionResult Accept(string byUserId)
         {
-            // create two friend instances for both users
-            return RedirectToAction();
+            var currentUserId = userManager.GetUserId(User);
+            var currentDbUser = userManager.FindByIdAsync(currentUserId);
+            if (friendService.IsFriendAlready(currentUserId, byUserId))
+            {
+                notificationService.Delete(byUserId, currentDbUser.Result.Email);
+                return RedirectToAction("ActionMessage", "Home", new { Message = $"You are already friend with {userManager.FindByIdAsync(byUserId).Result.Email}" });
+            }
+            friendService.Create(byUserId, currentUserId);
+            notificationService.Delete(byUserId, currentDbUser.Result.Email);
+            return RedirectToAction("ActionMessage", "Home", new { Message = $"Friend request accepted. You are now friends with {userManager.FindByIdAsync(byUserId).Result.Email}" });
         }
     }
 }

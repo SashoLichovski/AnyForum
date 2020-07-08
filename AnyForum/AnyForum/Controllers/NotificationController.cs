@@ -27,5 +27,11 @@ namespace AnyForum.Controllers
             var modelList = dbNot.Select(x => ConvertTo.NotificationViewModel(x)).ToList();
             return View(modelList);
         }
+
+        public IActionResult Decline(int id)
+        {
+            notificationService.Delete(id);
+            return RedirectToAction("ActionMessage", "Home", new { Message = $"Friend request declined" });
+        }
     }
 }

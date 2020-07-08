@@ -4,10 +4,11 @@
 <div class="container">
     @foreach (var item in Model)
     {
+        <br />
         <div>
-            <h5>@item.Message</h5>
-            <a class="btn btn-outline-success" asp-controller="Friend" asp-action="Accept" asp-route-byUserId="@item.ByUserId">Accept</a>
-            <a>Decline</a>
+            <h4>@item.Message</h4>
+            <a class="btn btn-outline-success" asp-controller="Friend" asp-action="Accept" asp-route-byUserId="@item.ByUserId">Accept</a> | 
+            <a class="btn btn-outline-danger" asp-controller="Notification" asp-action="Decline" asp-route-id="@item.Id">Decline</a>
         </div>
         <hr />
     }

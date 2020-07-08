@@ -23,6 +23,19 @@ namespace AnyForum.Repositories
             context.SaveChanges();
         }
 
+        public void Delete(string byUserId, string currentUserEmail)
+        {
+            var dbNot = context.Notifications.FirstOrDefault(x => x.UserId == byUserId && x.SendTo == currentUserEmail);
+            context.Notifications.Remove(dbNot);
+            context.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            context.Notifications.Remove(context.Notifications.FirstOrDefault(x => x.Id == id));
+            context.SaveChanges();
+        }
+
         public List<Notification> GetAll(string email)
         {
             return context.Notifications

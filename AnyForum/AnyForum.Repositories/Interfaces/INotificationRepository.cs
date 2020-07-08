@@ -9,5 +9,7 @@ namespace AnyForum.Repositories.Interfaces
     {
         void Add(Notification notification);
         List<Notification> GetAll(string email);
+        void Delete(string byUserId, string currentUserEmail);
+        void Delete(int id);
     }
 }

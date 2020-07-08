@@ -28,5 +28,10 @@ namespace AnyForum.Repositories
         {
             return context.Friends.ToList();
         }
+
+        public List<Friend> GetAll(string userId)
+        {
+            return context.Friends.Where(x => x.UserId == userId).ToList();
+        }
     }
 }

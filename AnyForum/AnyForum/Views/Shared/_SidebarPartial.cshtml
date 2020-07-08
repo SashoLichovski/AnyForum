@@ -1,0 +1,24 @@
+﻿@inject AnyForum.Services.Interfaces.IFriendService friendService
+@inject Microsoft.AspNetCore.Identity.UserManager<Microsoft.AspNetCore.Identity.IdentityUser> userManager
+@{
+    var userId = userManager.GetUserId(User);
+    var allFriends = friendService.GetAll(userId);
+}
+<div class="friendSidebard" id="sidebar">
+    <h3 class="sidebarHeader">Friends</h3>
+
+    <div class="sidebardBody">
+        <div class="friend">
+            <a asp-controller="Friend" asp-action="AddFriend">Add friend</a>
+        </div>
+        @foreach (var friend in allFriends)
+        {
+        <a>
+            <div class="friend">@userManager.FindByIdAsync(friend.FriendId).Result.Email</div>
+        </a>
+        }
+        <div class="friend">Friend 1</div>
+        <div class="friend">Friend 1</div>
+        <div class="friend">Friend 1</div>
+    </div>
+</div>

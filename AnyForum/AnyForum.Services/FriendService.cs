@@ -17,6 +17,10 @@ namespace AnyForum.Services
             this.friendRepo = friendRepo;
         }
 
+        public List<Friend> GetAll(string userId)
+        {
+            return friendRepo.GetAll(userId);
+        }
         public void Create(string byUserId, string currentUserId)
         {
             var currentUserFriend = new Friend()

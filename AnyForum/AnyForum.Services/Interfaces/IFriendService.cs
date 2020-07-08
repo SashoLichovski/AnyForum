@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnyForum.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,5 +9,6 @@ namespace AnyForum.Services.Interfaces
     {
         void Create(string byUserId, string currentUserId);
         bool IsFriendAlready(string userId, string friendId);
+        List<Friend> GetAll(string userId);
     }
 }

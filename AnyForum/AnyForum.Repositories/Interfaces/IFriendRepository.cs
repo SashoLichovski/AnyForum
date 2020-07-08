@@ -8,5 +8,6 @@ namespace AnyForum.Repositories.Interfaces
     {
         void Add(Friend currentUserFriend, Friend otherUserFriend);
         List<Friend> GetAll();
+        List<Friend> GetAll(string userId);
     }
 }

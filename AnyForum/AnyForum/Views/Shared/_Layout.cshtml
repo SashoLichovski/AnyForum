@@ -43,18 +43,11 @@
             </div>
         </nav>
     </header>
-    <div class="friendSidebard" id="sidebar">
-        <h3 class="sidebarHeader">Friends</h3>
 
-        <div class="sidebardBody">
-            <div class="friend">
-                <a asp-controller="Friend" asp-action="AddFriend">Add friend</a>
-            </div>
-            <div class="friend">Friend 1</div>
-            <div class="friend">Friend 1</div>
-            <div class="friend">Friend 1</div>
-        </div>
-    </div>
+    @*SIDEBAR*@
+    <partial name="_SidebarPartial" />
+    @*SIDEBAR*@
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
